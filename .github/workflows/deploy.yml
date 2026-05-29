@@ -27,13 +27,11 @@ jobs:
     - name: Instalar dependencias
       run: pnpm install --no-frozen-lockfile
 
-    # Paso 5: Compilar el proyecto
+    # Paso 5: Compilar el proyecto localmente (Control de calidad)
     - name: Compilar proyecto (Build)
       run: pnpm run build
 
-    # ==========================================
-    # Autenticarse en AWS
-    # ==========================================
+    # Paso 6: Autenticarse en AWS usando tus secretos seguros
     - name: Configurar credenciales de AWS
       uses: aws-actions/configure-aws-credentials@v4
       with:
@@ -41,6 +39,17 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-west-3
 
-    # Paso de prueba: Ver si AWS nos reconoce
-    - name: Probar conexión con AWS
-      run: aws sts get-caller-identity
+    # Loguearse de forma segura en Amazon ECR
+    - name: Iniciar sesión en Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
+
+    # Compilar la imagen Docker y subirla al almacén de AWS
+    - name: Compilar, etiquetar y subir imagen a Amazon ECR
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: portfolio-web # El nombre exacto que le pusiste a tu repositorio en AWS
+        IMAGE_TAG: latest # La etiqueta para identificar la última versión
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
