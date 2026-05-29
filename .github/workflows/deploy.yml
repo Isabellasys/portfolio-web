@@ -1,34 +1,46 @@
 name: CI/CD Portfolio Deployment
 
-# Mis notas: Cuándo quiero que se despierte el robot de GitHub
 on:
   push:
     branches: [ "main" ]
 
-# Mis notas: Las tareas automáticas que va a ejecutar en la nube
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-    # Paso 1: Clonar mi repositorio dentro del servidor de GitHub
+    # Paso 1: Clonar el repositorio
     - name: Checkout del código
       uses: actions/checkout@v4
 
-    # Paso 2: Configurar Node.js en su versión 20 para que sea idéntico a mi PC
+    # Paso 2: Configurar Node.js v20
     - name: Configurar Node.js v20
       uses: actions/setup-node@v4
       with:
         node-version: 20
 
-    # Paso 3: Instalar pnpm de forma global para manejar mis dependencias
+    # Paso 3: Instalar pnpm
     - name: Instalar pnpm
       run: npm install -g pnpm
 
-    # Paso 4: Instalar todas las librerías de mi package.json
+    # Paso 4: Instalar dependencias
     - name: Instalar dependencias
       run: pnpm install --no-frozen-lockfile
 
-    # Paso 5: El test de fuego. Compilar el portfolio para ver que no hay fallos
+    # Paso 5: Compilar el proyecto
     - name: Compilar proyecto (Build)
       run: pnpm run build
+
+    # ==========================================
+    # Autenticarse en AWS
+    # ==========================================
+    - name: Configurar credenciales de AWS
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets::AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets::AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-west-3 # La región de París que vimos en tu consola
+
+    # Paso de prueba: Ver si AWS nos reconoce
+    - name: Probar conexión con AWS
+      run: aws sts get-caller-identity
