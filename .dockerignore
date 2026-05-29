@@ -1,0 +1,9 @@
+# Para evitar subir la basura local al contenedor
+node_modules
+.next
+out
+build
+.git
+.gitignore
+README.md
+pnpm-lock.yaml
