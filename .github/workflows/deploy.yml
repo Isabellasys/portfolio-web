@@ -1,0 +1,34 @@
+name: CI/CD Portfolio Deployment
+
+# Mis notas: Cuándo quiero que se despierte el robot de GitHub
+on:
+  push:
+    branches: [ "main" ]
+
+# Mis notas: Las tareas automáticas que va a ejecutar en la nube
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Paso 1: Clonar mi repositorio dentro del servidor de GitHub
+    - name: Checkout del código
+      uses: actions/checkout@v4
+
+    # Paso 2: Configurar Node.js en su versión 20 para que sea idéntico a mi PC
+    - name: Configurar Node.js v20
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    # Paso 3: Instalar pnpm de forma global para manejar mis dependencias
+    - name: Instalar pnpm
+      run: npm install -g pnpm
+
+    # Paso 4: Instalar todas las librerías de mi package.json
+    - name: Instalar dependencias
+      run: pnpm install --no-frozen-lockfile
+
+    # Paso 5: El test de fuego. Compilar el portfolio para ver que no hay fallos
+    - name: Compilar proyecto (Build)
+      run: pnpm run build
