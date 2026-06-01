@@ -67,17 +67,17 @@ import {
 
 const personalInfo = {
   name: "Efranyeli Ramirez",
-  title: "Junior DevOps & Systems Engineer",
+  title: "Linux, Cloud & Automation",
   location: "Madrid, Espana",
-  email: "efranyeligil@gmail.com",
+  email: "[tu@email.com]",
   phone: "+34 622 906 233",
-  linkedin: "linkedin.com/in/isabella5",
+  linkedin: "linkedin.com/in/efranyeli-ramirez",
   github: "github.com/Isabellasys",
   website: "",
   summary:
-    "Técnica Superior en Administración de Sistemas Informáticos en Red (ASIR) con especialización en ciberseguridad. Orientada a la ingeniería DevOps, optimización de sistemas y la automatización de infraestructura. Actualmente enfocada en el diseño de arquitecturas robustas y flujos de despliegue continuo (CI/CD) mediante laboratorios prácticos y proyectos reales basados en metodologías Cloud Native.",
-  subtitle: "Diseñando infraestructura escalable, automatización de entornos y despliegues eficientes en la nube.",
-  photo: "/foto.png"
+    "Tecnica Superior en Administracion de Sistemas Informaticos en Red (ASIR) con interes en Linux, Cloud Computing, Automatizacion e Infraestructura. Actualmente ampliando conocimientos mediante proyectos practicos con Azure, Docker, Ansible y tecnologias orientadas a DevOps.",
+  subtitle: "Construyendo infraestructura, automatizacion y proyectos en la nube con Linux, Azure, Docker y Ansible.",
+  photo: "/images/profile.jpg",
 };
 
 const experience = [
@@ -124,7 +124,7 @@ const education = [
 // Insignias organizadas por grupo
 const redHatBadges = [
   {
-    name: "RH134 - Red Hat System Administration II - Badge",
+    name: "RH134 - Red Hat System Administration II - Official Badge",
     issuer: "Red Hat",
     date: "2025",
     pdfUrl: "/certifications/rh134-badge.pdf",
@@ -133,7 +133,7 @@ const redHatBadges = [
     color: "#EE0000",
   },
   {
-    name: "RH294 - Red Hat Ansible Automation - Badge",
+    name: "RH294 - Red Hat Ansible Automation - Official Badge",
     issuer: "Red Hat",
     date: "2025",
     pdfUrl: "/certifications/rh294-badge.pdf",
@@ -142,7 +142,7 @@ const redHatBadges = [
     color: "#EE0000",
   },
   {
-    name: "AU374 - Advanced Ansible Automation Platform - Badge",
+    name: "AU374 - Advanced Ansible Automation Platform - Official Badge",
     issuer: "Red Hat",
     date: "2025",
     pdfUrl: "/certifications/au374-badge.pdf",
@@ -154,7 +154,7 @@ const redHatBadges = [
 
 const paloAltoBadges = [
   {
-    name: "Cybersecurity Foundation - Badge",
+    name: "Cybersecurity Foundation - Official Badge",
     issuer: "Palo Alto Networks",
     date: "2025",
     pdfUrl: "/certifications/palo-alto-cybersecurity.pdf",
@@ -163,7 +163,7 @@ const paloAltoBadges = [
     color: "#F04E23",
   },
   {
-    name: "Network Security - Badge",
+    name: "Network Security - Official Badge",
     issuer: "Palo Alto Networks",
     date: "2025",
     pdfUrl: "/certifications/network-security-badge.pdf",
@@ -172,7 +172,7 @@ const paloAltoBadges = [
     color: "#F04E23",
   },
   {
-    name: "Security Operations - Badge",
+    name: "Security Operations - Official Badge",
     issuer: "Palo Alto Networks",
     date: "2025",
     pdfUrl: "/certifications/security-operations-badge.pdf",
@@ -181,7 +181,7 @@ const paloAltoBadges = [
     color: "#F04E23",
   },
   {
-    name: "Cloud Security - Badge",
+    name: "Cloud Security - Official Badge",
     issuer: "Palo Alto Networks",
     date: "2025",
     pdfUrl: "/certifications/cloud-security-badge.pdf",
@@ -197,10 +197,10 @@ const certifications = [...redHatBadges, ...paloAltoBadges];
 // Tech Stack - Compact badges por categoria
 const techStackCategories = [
   { category: "Linux & Systems", items: ["Linux", "RHEL", "Bash", "SELinux"] },
-  { category: "Cloud", items: ["Azure"] },
-  { category: "Automation", items: ["Ansible", "Git", "GitHub"] },
+  { category: "Cloud & AWS", items: ["AWS", "ECS", "Fargate", "ECR", "CloudWatch", "Azure"] },
+  { category: "IaC & Automation", items: ["Terraform", "Ansible", "Git", "GitHub", "GitHub Actions"] },
   { category: "Containers", items: ["Docker"] },
-  { category: "Development", items: ["Python", "HTML", "CSS", "JavaScript", "VS Code"] },
+  { category: "Development", items: ["Python", "HTML", "CSS", "JavaScript", "Next.js", "TypeScript"] },
   { category: "Infrastructure", items: ["Nginx", "HAProxy", "MQTT", "Mosquitto", "MariaDB", "pfSense"] },
 ];
 
@@ -212,8 +212,27 @@ const languages = [
 // Proyectos
 const otherProjects = [
   {
+    title: "DevOps Portfolio Platform",
+    description: "Proyecto personal utilizado como laboratorio DevOps para desplegar este portfolio en un entorno cloud real. La aplicacion esta desarrollada con Next.js, empaquetada mediante Docker y desplegada sobre AWS ECS Fargate. La infraestructura se define mediante Terraform, las imagenes se almacenan en Amazon ECR y los logs se centralizan mediante CloudWatch.",
+    technologies: ["Terraform", "AWS", "ECS", "Fargate", "ECR", "CloudWatch", "Docker", "GitHub Actions", "Next.js", "TypeScript", "Linux"],
+    icons: [SiTerraform, DiAws, SiDocker, SiGithubactions, SiLinux],
+    demoUrl: "#top",
+    githubUrl: "https://github.com/Isabellasys/devops-portfolio",
+    category: "Cloud Native DevOps",
+    isLiveProject: true,
+    lessonsLearned: [
+      "Infrastructure as Code con Terraform",
+      "Despliegue de contenedores en AWS ECS Fargate",
+      "Gestion de imagenes mediante Amazon ECR",
+      "Centralizacion de logs con CloudWatch",
+      "Seguridad mediante Security Groups",
+      "Resolucion de incidencias reales de despliegue",
+      "Optimizacion de costes cloud",
+    ],
+  },
+  {
     title: "HORSEBIT (My Version)",
-    description: "Despliegue de una arquitectura de red segmentada y segura basada en un clúster virtualizado. Implementación de balanceo de carga de capa 7 (HAProxy) para distribuir tráfico web hacia nodos NGINX redundantes. Gestión de mensajería asíncrona mediante un bróker MQTT (Mosquitto) para la ingesta de datos simulados en tiempo real. Configuración completa del aprovisionamiento interno mediante Ansible Playbooks y securización perimetral con pfSense (reglas de firewall y NAT).",
+    description: "Proyecto Final de ASIR integrando administracion de sistemas, redes, automatizacion y desarrollo web. Infraestructura de 4 VMs: pfSense (firewall), Nodo Central (HAProxy, MQTT, MariaDB, Python, Ansible), y 2 servidores NGINX. Simula carreras en tiempo real via MQTT.",
     technologies: ["pfSense", "HAProxy", "NGINX", "Linux", "Python", "MQTT", "MariaDB", "Ansible", "Bash"],
     icons: [SiPfsense, DiNginx, SiLinux, DiPython, SiMqtt, SiMariadb, SiAnsible],
     demoUrl: "https://asir-final-project-myversion.netlify.app",
@@ -519,13 +538,17 @@ function HRView() {
       <section>
         <h2 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4 flex items-center gap-2">
           <Server size={16} />
-          Proyectos Adicionales
+          Proyectos
         </h2>
         <div className="grid gap-4">
           {otherProjects.map((project, index) => (
             <div
               key={index}
-              className="p-4 rounded-lg border border-border bg-card hover:border-primary/30 transition-all duration-200"
+              className={`p-4 rounded-lg border bg-card transition-all duration-200 ${
+                project.isLiveProject 
+                  ? 'border-green-500/30 hover:border-green-500/50' 
+                  : 'border-border hover:border-primary/30'
+              }`}
             >
               <div className="flex items-start gap-4">
                 {/* Icons */}
@@ -542,7 +565,21 @@ function HRView() {
                     <span className="px-1.5 py-0.5 text-[9px] font-medium bg-secondary text-muted-foreground rounded">
                       {project.category}
                     </span>
+                    {project.isLiveProject && (
+                      <span className="flex items-center gap-1 px-1.5 py-0.5 text-[9px] font-medium bg-green-500/10 text-green-600 rounded">
+                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                        LIVE
+                      </span>
+                    )}
                   </div>
+                  
+                  {/* Production Note for live project */}
+                  {project.isLiveProject && (
+                    <p className="text-[10px] text-green-600 mb-2 italic">
+                      This portfolio is the live production deployment of this project.
+                    </p>
+                  )}
+                  
                   <p className="text-xs text-muted-foreground leading-relaxed mb-3 line-clamp-2">
                     {project.description}
                   </p>
@@ -558,15 +595,25 @@ function HRView() {
                   
                   {/* Links */}
                   <div className="flex items-center gap-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-xs text-primary hover:underline"
-                    >
-                      <Globe size={12} />
-                      Ver Demo
-                    </a>
+                    {project.isLiveProject ? (
+                      <button
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="flex items-center gap-1 text-xs text-green-600 hover:text-green-500"
+                      >
+                        <Globe size={12} />
+                        You are here
+                      </button>
+                    ) : (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-xs text-primary hover:underline"
+                      >
+                        <Globe size={12} />
+                        Ver Demo
+                      </a>
+                    )}
                     <a
                       href={project.githubUrl}
                       target="_blank"
@@ -901,7 +948,7 @@ function TechnicalView() {
           <h2>projects</h2>
         </div>
         
-        {/* HORSEBIT - Featured Project */}
+        {/* DevOps Portfolio Platform - Featured Project */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -928,9 +975,37 @@ function TechnicalView() {
                 </span>
               </div>
             </div>
+            
+            {/* Production Status Note */}
+            <div className="mb-5 p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
+              <div className="flex items-center gap-2 mb-1">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-xs font-mono text-green-400 font-semibold">Running in Production on AWS ECS Fargate</span>
+              </div>
+              <p className="text-xs text-muted-foreground pl-4">
+                This portfolio is the live production environment deployed with Terraform, Docker and AWS.
+              </p>
+            </div>
+            
             <p className="text-sm text-muted-foreground leading-relaxed mb-5">
               {otherProjects[0].description}
             </p>
+            
+            {/* Lessons Learned */}
+            {otherProjects[0].lessonsLearned && (
+              <div className="mb-5">
+                <h4 className="text-xs font-mono text-primary uppercase tracking-wider mb-2">Lessons Learned</h4>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-1.5">
+                  {otherProjects[0].lessonsLearned.map((lesson, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-muted-foreground">
+                      <CheckCircle size={12} className="text-green-500 mt-0.5 shrink-0" />
+                      {lesson}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            
             <div className="flex flex-wrap gap-3 mb-5">
               {otherProjects[0].icons.map((Icon, i) => (
                 <Icon key={i} className="w-6 h-6 text-muted-foreground hover:text-primary transition-colors" />
@@ -942,15 +1017,25 @@ function TechnicalView() {
               ))}
             </div>
             <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-border/30">
-              <a
-                href={otherProjects[0].demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 text-sm font-mono bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
-              >
-                <Globe size={16} />
-                Ver Demo
-              </a>
+              {otherProjects[0].isLiveProject ? (
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-mono bg-green-600/90 text-white rounded-lg hover:bg-green-600 transition-colors"
+                >
+                  <Globe size={16} />
+                  You are here
+                </button>
+              ) : (
+                <a
+                  href={otherProjects[0].demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-mono bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity"
+                >
+                  <Globe size={16} />
+                  Ver Demo
+                </a>
+              )}
               <a
                 href={otherProjects[0].githubUrl}
                 target="_blank"
