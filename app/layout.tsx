@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono } from 'next/font/google' // Asegúrate de tener la versión actualizada de Next.js
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
+// Configuración de fuentes correctas
 const geistSans = Geist({
   subsets: ['latin'],
   variable: '--font-geist-sans',
@@ -24,21 +25,8 @@ export const metadata: Metadata = {
     type: 'website',
   },
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/icon.png',
+    apple: '/icon.png',
   },
 }
 
@@ -54,8 +42,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} bg-background`}>
-      <body className="font-sans antialiased bg-background text-foreground">
+    <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="font-sans antialiased bg-background text-foreground min-h-screen">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

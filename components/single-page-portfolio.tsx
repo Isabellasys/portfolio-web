@@ -62,60 +62,98 @@ import {
 } from "lucide-react";
 
 // ============================================
-// DATOS PARA RELLENAR - EDITA AQUI TUS DATOS
+// DATOS PARA RELLENAR - EDITA AQUÍ TUS DATOS
 // ============================================
 
 const personalInfo = {
   name: "Efranyeli Ramirez",
   title: "Linux, Cloud & Automation",
-  location: "Madrid, Espana",
-  email: "[tu@email.com]",
+  location: "Madrid, España",
+  email: "efranyeligil@gmail.com",
   phone: "+34 622 906 233",
-  linkedin: "linkedin.com/in/efranyeli-ramirez",
+  linkedin: "linkedin.com/in/isabella5",
   github: "github.com/Isabellasys",
   website: "",
   summary:
-    "Tecnica Superior en Administracion de Sistemas Informaticos en Red (ASIR) con interes en Linux, Cloud Computing, Automatizacion e Infraestructura. Actualmente ampliando conocimientos mediante proyectos practicos con Azure, Docker, Ansible y tecnologias orientadas a DevOps.",
-  subtitle: "Construyendo infraestructura, automatizacion y proyectos en la nube con Linux, Azure, Docker y Ansible.",
-  photo: "/images/profile.jpg",
+    "Técnica Superior en Administración de Sistemas Informáticos en Red (ASIR) con perfil enfocado en ciberseguridad, automatización y gestión de entornos cloud. Experiencia práctica diseñando y desplegando infraestructuras seguras tanto en nubes públicas (AWS/Azure) como en entornos autogestionados en Hetzner, aplicando aislamiento de red y empaquetado mediante contenedores. Orientada a la optimización de ciclos de despliegue mediante CI/CD bajo principios de mínimo privilegio y alta disponibilidad.",
+  subtitle: "Construyendo infraestructuras cloud seguras, aislamiento de red y automatización de sistemas en AWS, Azure y Hetzner.",
+  photo: "/foto.png",
 };
 
-const experience = [
+const technicalExperience = [
   {
     company: "Computer Space",
-    position: "Practicas Curriculares ASIR",
-    period: "Dic 2024 - Abr 2025",
-    location: "Madrid, Espana",
-    intro: "Periodo de practicas curriculares realizado durante el CFGS de Administracion de Sistemas Informaticos en Red (ASIR). Formacion practica orientada a Linux empresarial, automatizacion con Ansible y tecnologias Red Hat mediante laboratorios guiados y contenidos oficiales.",
+    position: "Prácticas Curriculares ASIR",
+    period: "Dic 2025 - Abr 2026",
+    location: "Madrid, España",
+    intro: "Periodo de prácticas curriculares realizado durante el CFGS de ASIR, orientado a Linux empresarial y automatización.",
     description: [
-      "Administracion de sistemas Red Hat Enterprise Linux (RHEL 8/9)",
-      "Gestion de usuarios, permisos y servicios",
-      "Automatizacion mediante Ansible Playbooks",
-      "Conceptos de firewalld y SELinux",
-      "Laboratorios practicos de administracion Linux",
+      "Administración de sistemas Red Hat Enterprise Linux (RHEL 8/9).",
+      "Gestión de usuarios, permisos y servicios.",
+      "Automatización mediante Ansible Playbooks y conceptos de redes."
     ],
-    formation: [
-      "RH134 - Red Hat System Administration II",
-      "RH294 - Red Hat Enterprise Linux Automation with Ansible",
-      "AU374 - Developing Advanced Automation with Red Hat Ansible Automation Platform",
-    ],
-    technologies: ["RHEL", "Ansible", "Bash", "Git", "systemd", "SELinux"],
+    technologies: ["RHEL", "Ansible", "Bash", "Git", "systemd"],
   },
+  {
+    company: "RANDSTAD EMPLEO ETT, S.A.",
+    position: "Técnico/a de TIC",
+    period: "Marzo de 2025 - Diciembre de 2025",
+    location: "Madrid, España",
+    intro: "Soporte técnico, asistencia a usuarios y tareas de administración de sistemas.",
+    description: [
+      "Soporte técnico avanzado y asistencia directa a usuarios frente a incidencias.",
+      "Tareas de administración de sistemas e infraestructura informática.",
+      "Mantenimiento preventivo y correctivo de hardware y software.",
+      "Resolución de incidencias informáticas generales y gestión de correo electrónico."
+    ],
+    technologies: ["Soporte TIC", "Administración de Sistemas", "Mantenimiento Hardware/Software", "Gestión de Correo"],
+  }
 ];
+
+const operationalExperience = [
+  {
+    company: "ASITUR",
+    position: "Tramitador de Siniestros Indemnizables",
+    period: "Sept 2022 - Sept 2024",
+    location: "Madrid, España",
+    intro: "Gestión y resolución de incidencias operativas bajo entornos de alta presión.",
+    description: [
+      "Gestión y seguimiento de incidencias hasta su resolución.",
+      "Revisión y validación de documentación conforme a procedimientos.",
+      "Atención telefónica, soporte al usuario y reporting de resultados."
+    ],
+    technologies: ["Gestión de Incidencias", "Control de Procesos", "Soporte", "Reporting"],
+  },
+  {
+    company: "Mesos",
+    position: "Auxiliar Administrativo",
+    period: "Ago 2020 - 2022",
+    location: "Madrid, España",
+    intro: "Soporte administrativo y operativo trabajando con sistemas de gestión.",
+    description: [
+      "Gestión de incidencias y coordinación directa con técnicos.",
+      "Facturación y gestión operativa del día a día.",
+      "Control de stock y gestión de recursos."
+    ],
+    technologies: ["Facturación", "Coordinación", "Gestión de Recursos"],
+  }
+];
+
+const experience = [...technicalExperience, ...operationalExperience];
 
 const education = [
   {
     institution: "Universidad Europea de Madrid",
-    degree: "CFGS Administracion de Sistemas Informaticos en Red (ASIR)",
-    specialization: "Especializacion en Ciberseguridad",
+    degree: "CFGS Administración de Sistemas Informáticos en Red (ASIR)",
+    specialization: "Especialización en Ciberseguridad",
     period: "2024 - 2025",
-    location: "Madrid, Espana",
+    location: "Madrid, España",
     status: "Finalizado",
   },
   {
     institution: "Instituto Universitario de Seguros",
-    degree: "TSU Administracion de Riesgos y Seguros",
-    specialization: "Gestion analitica y evaluacion de riesgos",
+    degree: "TSU Administración de Riesgos y Seguros",
+    specialization: "Gestión analítica y evaluación de riesgos",
     period: "Completado",
     location: "Caracas, Venezuela",
   },
@@ -127,7 +165,7 @@ const redHatBadges = [
     name: "RH134 - Red Hat System Administration II - Official Badge",
     issuer: "Red Hat",
     date: "2025",
-    pdfUrl: "/certifications/rh134-badge.pdf",
+    pdfUrl: "/certs/rh134.pdf",
     icon: SiRedhat,
     skills: ["RHEL", "systemd", "Storage", "Networking", "SELinux"],
     color: "#EE0000",
@@ -136,7 +174,7 @@ const redHatBadges = [
     name: "RH294 - Red Hat Ansible Automation - Official Badge",
     issuer: "Red Hat",
     date: "2025",
-    pdfUrl: "/certifications/rh294-badge.pdf",
+    pdfUrl: "/certs/rh294.pdf",
     icon: SiRedhat,
     skills: ["Ansible", "Playbooks", "Automation", "IaC", "YAML"],
     color: "#EE0000",
@@ -145,7 +183,7 @@ const redHatBadges = [
     name: "AU374 - Advanced Ansible Automation Platform - Official Badge",
     issuer: "Red Hat",
     date: "2025",
-    pdfUrl: "/certifications/au374-badge.pdf",
+    pdfUrl: "/certs/au374.pdf",
     icon: SiRedhat,
     skills: ["Ansible", "Automation Platform", "Advanced Playbooks"],
     color: "#EE0000",
@@ -157,7 +195,7 @@ const paloAltoBadges = [
     name: "Cybersecurity Foundation - Official Badge",
     issuer: "Palo Alto Networks",
     date: "2025",
-    pdfUrl: "/certifications/palo-alto-cybersecurity.pdf",
+    pdfUrl: "/certs/Cybersecurity_Foundation.pdf",
     icon: SiPaloaltonetworks,
     skills: ["Cybersecurity", "Threat Prevention", "Security Fundamentals"],
     color: "#F04E23",
@@ -166,7 +204,7 @@ const paloAltoBadges = [
     name: "Network Security - Official Badge",
     issuer: "Palo Alto Networks",
     date: "2025",
-    pdfUrl: "/certifications/network-security-badge.pdf",
+    pdfUrl: "/certs/Network_Security_Fundamentals.pdf",
     icon: SiPaloaltonetworks,
     skills: ["Network Security", "Firewalls", "Zero Trust"],
     color: "#F04E23",
@@ -175,7 +213,7 @@ const paloAltoBadges = [
     name: "Security Operations - Official Badge",
     issuer: "Palo Alto Networks",
     date: "2025",
-    pdfUrl: "/certifications/security-operations-badge.pdf",
+    pdfUrl: "/certs/Security_Operations_Fundamentals.pdf",
     icon: SiPaloaltonetworks,
     skills: ["SOC", "Incident Response", "Threat Detection"],
     color: "#F04E23",
@@ -184,17 +222,26 @@ const paloAltoBadges = [
     name: "Cloud Security - Official Badge",
     issuer: "Palo Alto Networks",
     date: "2025",
-    pdfUrl: "/certifications/cloud-security-badge.pdf",
+    pdfUrl: "/certs/Cloud_Security_Fundamentals.pdf",
     icon: SiPaloaltonetworks,
     skills: ["Cloud Security", "Azure", "Compliance"],
     color: "#F04E23",
   },
 ];
 
-// Combinado para compatibilidad
-const certifications = [...redHatBadges, ...paloAltoBadges];
+const trainingBadges = [
+  {
+    name: "Construcción e Integración de Páginas Web (MF0950_2 / MF0951_2)",
+    issuer: "Formación Complementaria Femxa",
+    date: "2025",
+    pdfUrl: "/certs/femxa.pdf",
+    icon: GraduationCap,
+    skills: ["Web Development", "HTML5", "CSS3", "JavaScript", "Software Integration"],
+    color: "#10B981",
+  },
+];
 
-// Tech Stack - Compact badges por categoria
+// Tech Stack - Compact badges por categoría
 const techStackCategories = [
   { category: "Linux & Systems", items: ["Linux", "RHEL", "Bash", "SELinux"] },
   { category: "Cloud & AWS", items: ["AWS", "ECS", "Fargate", "ECR", "CloudWatch", "Azure"] },
@@ -205,15 +252,15 @@ const techStackCategories = [
 ];
 
 const languages = [
-  { name: "Espanol", level: "Nativo" },
-  { name: "Ingles", level: "Intermedio (B1-B2)" },
+  { name: "Español", level: "Nativo" },
+  { name: "Inglés", level: "Básico (A2)" },
 ];
 
 // Proyectos
 const otherProjects = [
   {
     title: "DevOps Portfolio Platform",
-    description: "Proyecto personal utilizado como laboratorio DevOps para desplegar este portfolio en un entorno cloud real. La aplicacion esta desarrollada con Next.js, empaquetada mediante Docker y desplegada sobre AWS ECS Fargate. La infraestructura se define mediante Terraform, las imagenes se almacenan en Amazon ECR y los logs se centralizan mediante CloudWatch.",
+    description: "Proyecto personal utilizado como laboratorio DevOps para desplegar este portfolio en un entorno cloud real. La aplicación está desarrollada con Next.js, empaquetada mediante Docker y desplegada sobre AWS ECS Fargate. La infraestructura se define mediante Terraform, las imágenes se almacenan en Amazon ECR y los logs se centralizan mediante CloudWatch.",
     technologies: ["Terraform", "AWS", "ECS", "Fargate", "ECR", "CloudWatch", "Docker", "GitHub Actions", "Next.js", "TypeScript", "Linux"],
     icons: [SiTerraform, DiAws, SiDocker, SiGithubactions, SiLinux],
     demoUrl: "#top",
@@ -223,16 +270,16 @@ const otherProjects = [
     lessonsLearned: [
       "Infrastructure as Code con Terraform",
       "Despliegue de contenedores en AWS ECS Fargate",
-      "Gestion de imagenes mediante Amazon ECR",
-      "Centralizacion de logs con CloudWatch",
+      "Gestión de imágenes mediante Amazon ECR",
+      "Centralización de logs con CloudWatch",
       "Seguridad mediante Security Groups",
-      "Resolucion de incidencias reales de despliegue",
-      "Optimizacion de costes cloud",
+      "Resolución de incidencias reales de despliegue",
+      "Optimización de costes cloud",
     ],
   },
   {
     title: "HORSEBIT (My Version)",
-    description: "Proyecto Final de ASIR integrando administracion de sistemas, redes, automatizacion y desarrollo web. Infraestructura de 4 VMs: pfSense (firewall), Nodo Central (HAProxy, MQTT, MariaDB, Python, Ansible), y 2 servidores NGINX. Simula carreras en tiempo real via MQTT.",
+    description: "Proyecto Final de ASIR integrando administración de sistemas, redes, automatización y desarrollo web. Infraestructura de 4 VMs: pfSense (firewall), Nodo Central (HAProxy, MQTT, MariaDB, Python, Ansible), y 2 servidores NGINX. Sistema de alta disponibilidad que gestiona y procesa mensajería IoT en tiempo real mediante el protocolo MQTT.",
     technologies: ["pfSense", "HAProxy", "NGINX", "Linux", "Python", "MQTT", "MariaDB", "Ansible", "Bash"],
     icons: [SiPfsense, DiNginx, SiLinux, DiPython, SiMqtt, SiMariadb, SiAnsible],
     demoUrl: "https://asir-final-project-myversion.netlify.app",
@@ -242,7 +289,7 @@ const otherProjects = [
   },
   {
     title: "Azure Linux Infrastructure Basic",
-    description: "Proyecto de automatizacion de infraestructura en Microsoft Azure utilizando Ansible, Linux y Docker. El playbook automatiza la creacion de Resource Group, VNet, Subred, NSG, IP Publica, NIC y VM Ubuntu Server. Cloud-Init instala Docker, clona el repo y ejecuta la app en contenedor.",
+    description: "Proyecto de automatización de infraestructura en Microsoft Azure utilizando Ansible, Linux y Docker. El playbook automatiza la creación de Resource Group, VNet, Subred, NSG, IP Pública, NIC y VM Ubuntu Server. Cloud-Init instala Docker, clona el repo y ejecuta la app en contenedor.",
     technologies: ["Azure", "Ansible", "Ubuntu Server", "Linux", "Docker", "GitHub", "Netlify"],
     icons: [VscAzure, SiAnsible, SiLinux, SiDocker, SiGithub, SiNetlify],
     demoUrl: "https://azure-linux-infrastructure-basic.netlify.app",
@@ -251,14 +298,47 @@ const otherProjects = [
   },
   {
     title: "ASIR Infrastructure Presentation",
-    description: "Presentacion web interactiva desarrollada para la defensa del Proyecto Final de ASIR. Explica la arquitectura, tecnologias y componentes utilizados, permitiendo mostrar de forma visual la infraestructura disenada.",
+    description: "Presentación web interactiva desarrollada para la defensa del Proyecto Final de ASIR. Explica la arquitectura, tecnologías y componentes utilizados, permitiendo mostrar de forma visual la infraestructura diseñada.",
     technologies: ["HTML", "CSS", "JavaScript", "GitHub", "Netlify"],
     icons: [SiHtml5, SiCss, SiJavascript, SiGithub, SiNetlify],
     demoUrl: "https://asir-infrastructure-presentation.netlify.app",
     githubUrl: "https://github.com/Isabellasys/asir-infrastructure-presentation",
     category: "Documentation",
   },
+  {
+    title: "Infraestructura Autogestionada con Coolify",
+    description: "Aprovisionamiento y gestión de servidor VPS utilizando Coolify como panel de control. Despliegue de proyectos reales en contenedores aislados.",
+    image: "/coolify.png",
+    technologies: ["Coolify", "Docker", "VPS", "Contenedores"],
+    icons: [SiDocker, SiLinux],
+    category: "Homelab",
+  },
+  {
+    title: "Automatización e Integración con N8N",
+    description: "Implementación de un flujo de automatización que recibe datos vía Webhook, los inserta en PostgreSQL y envía alertas por Telegram.",
+    image: "/n8n.png",
+    technologies: ["n8n", "Webhook", "PostgreSQL", "Telegram"],
+    icons: [Layers, SiDocker],
+    category: "Homelab",
+  },
+  {
+    title: "Gestión de Datos con NocoDB",
+    description: "Despliegue de entorno de base de datos utilizando NocoDB gestionado a través de Coolify para la administración visual de datos en la nube.",
+    image: "/nocodb.png",
+    technologies: ["NocoDB", "Bases de Datos", "Docker"],
+    icons: [SiMariadb, SiDocker],
+    category: "Homelab",
+  },
 ];
+
+const youtubeChannel = {
+  title: "Canal de YouTube",
+  handle: "@Helloisabellarg",
+  url: "https://www.youtube.com/@Helloisabellarg",
+  description:
+    "Vídeos, prácticas y contenido que fui subiendo durante mi primer año del CFGS en Administración de Sistemas Informáticos en Red (ASIR).",
+  technologies: ["ASIR", "Prácticas", "Sistemas", "Redes", "YouTube"],
+};
 
 // ============================================
 // COMPONENTE PRINCIPAL
@@ -376,7 +456,7 @@ export function SinglePagePortfolio() {
         }`}>
           <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
             <span className="font-mono">
-              {mode === "technical" ? "// " : ""}Ultima actualizacion: Mayo 2025
+              {mode === "technical" ? "// " : ""}Última actualización: Mayo 2025
             </span>
             <div className="flex items-center gap-3">
               <span className="flex items-center gap-2">
@@ -472,59 +552,29 @@ function HRView() {
 
       {/* Experience */}
       <section>
-        <h2 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4 flex items-center gap-2">
-          <Briefcase size={16} />
-          Experiencia
-        </h2>
+        <h2 className="text-2xl font-bold mb-6 text-foreground">Experiencia Laboral</h2>
         <div className="space-y-5">
           {experience.map((job, index) => (
-            <div key={index} className="border-l-2 border-primary pl-4">
+            <div key={index} className="border-l-2 border-primary pl-4 py-2">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
                 <div>
                   <h3 className="font-semibold text-foreground">{job.position}</h3>
                   <p className="text-sm text-primary">{job.company}</p>
                 </div>
-                <div className="text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <Calendar size={12} />
-                    {job.period}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <MapPin size={12} />
-                    {job.location}
-                  </span>
+                <div className="text-sm text-muted-foreground sm:text-right">
+                  <p>{job.period}</p>
+                  <p>{job.location}</p>
                 </div>
               </div>
-              {job.intro && (
-                <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                  {job.intro}
-                </p>
-              )}
-              <p className="text-xs font-medium text-foreground mb-2">Actividades realizadas:</p>
-              <ul className="text-sm text-muted-foreground space-y-1 mb-3">
+              <p className="text-sm text-muted-foreground mb-3">{job.intro}</p>
+              <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground mb-3">
                 {job.description.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-primary mt-1.5">•</span>
-                    {item}
-                  </li>
+                  <li key={i}>{item}</li>
                 ))}
               </ul>
-              {job.formation && (
-                <>
-                  <p className="text-xs font-medium text-foreground mb-2">Programas formativos realizados:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1 mb-3">
-                    {job.formation.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-primary mt-1.5">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
               <div className="flex flex-wrap gap-1.5">
-                {job.technologies.map((tech) => (
-                  <span key={tech} className="px-2 py-0.5 text-xs bg-secondary text-secondary-foreground rounded">
+                {job.technologies.map((tech, i) => (
+                  <span key={i} className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded border border-border">
                     {tech}
                   </span>
                 ))}
@@ -534,14 +584,46 @@ function HRView() {
         </div>
       </section>
 
-      {/* Other Projects - HR View */}
+      {/* Projects - HR View */}
       <section>
         <h2 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4 flex items-center gap-2">
           <Server size={16} />
           Proyectos
         </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+          {otherProjects.filter((project) => project.image).map((project, index) => (
+            <div
+              key={index}
+              className="group rounded-lg border border-border bg-card overflow-hidden transition-all duration-200 hover:border-primary/30 flex flex-col h-full"
+            >
+              <div className="h-28 w-full overflow-hidden border-b border-border bg-muted/20 shrink-0">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4 flex flex-col flex-grow">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <h3 className="font-semibold text-foreground text-sm line-clamp-2">{project.title}</h3>
+                  <span className="px-1.5 py-0.5 text-[9px] font-medium bg-secondary text-muted-foreground rounded shrink-0">
+                    {project.category}
+                  </span>
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-3 line-clamp-3 flex-grow">{project.description}</p>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {project.technologies.map((tech, i) => (
+                    <span key={i} className="px-2 py-0.5 text-[10px] bg-secondary text-secondary-foreground rounded">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
         <div className="grid gap-4">
-          {otherProjects.map((project, index) => (
+          {otherProjects.filter((project) => !project.image).map((project, index) => (
             <div
               key={index}
               className={`p-4 rounded-lg border bg-card transition-all duration-200 ${
@@ -594,51 +676,91 @@ function HRView() {
                   </div>
                   
                   {/* Links */}
-                  <div className="flex items-center gap-3">
-                    {project.isLiveProject ? (
-                      <button
-                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        className="flex items-center gap-1 text-xs text-green-600 hover:text-green-500"
-                      >
-                        <Globe size={12} />
-                        You are here
-                      </button>
-                    ) : (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-xs text-primary hover:underline"
-                      >
-                        <Globe size={12} />
-                        Ver Demo
-                      </a>
-                    )}
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
-                    >
-                      <Github size={12} />
-                      Repositorio
-                    </a>
-                    {project.videoUrl && (
-                      <a
-                        href={project.videoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-xs text-red-500 hover:text-red-400"
-                      >
-                        <Youtube size={12} />
-                        Video
-                      </a>
-                    )}
-                  </div>
+                  {(project.isLiveProject || project.demoUrl || project.githubUrl || project.videoUrl) && (
+                    <div className="flex items-center gap-3">
+                      {project.isLiveProject ? (
+                        <button
+                          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                          className="flex items-center gap-1 text-xs text-green-600 hover:text-green-500"
+                        >
+                          <Globe size={12} />
+                          You are here
+                        </button>
+                      ) : project.demoUrl ? (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-xs text-primary hover:underline"
+                        >
+                          <Globe size={12} />
+                          Ver Demo
+                        </a>
+                      ) : null}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
+                        >
+                          <Github size={12} />
+                          Repositorio
+                        </a>
+                      )}
+                      {project.videoUrl && (
+                        <a
+                          href={project.videoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-xs text-red-500 hover:text-red-400"
+                        >
+                          <Youtube size={12} />
+                          Video
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-4 p-4 rounded-lg border border-red-500/20 bg-card transition-all duration-200 hover:border-red-500/40">
+          <div className="flex items-start gap-4">
+            <div className="shrink-0 w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+              <Youtube size={20} className="text-red-500" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <h3 className="font-semibold text-foreground text-sm">{youtubeChannel.title}</h3>
+                <span className="px-1.5 py-0.5 text-[9px] font-medium bg-red-500/10 text-red-600 rounded">
+                  Contenido ASIR
+                </span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+                {youtubeChannel.description}
+              </p>
+              <div className="flex flex-wrap gap-1.5 mb-3">
+                {youtubeChannel.technologies.map((tech) => (
+                  <span key={tech} className="px-2 py-0.5 text-[10px] bg-secondary text-secondary-foreground rounded">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <a
+                href={youtubeChannel.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-medium text-red-500 hover:text-red-400 transition-colors"
+              >
+                <Youtube size={14} />
+                {youtubeChannel.handle}
+                <ExternalLink size={11} className="opacity-60" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -646,7 +768,7 @@ function HRView() {
       <section>
         <h2 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4 flex items-center gap-2">
           <GraduationCap size={16} />
-          Educacion
+          Educación
         </h2>
         <div className="space-y-3">
           {education.map((edu, index) => (
@@ -664,11 +786,11 @@ function HRView() {
         </div>
       </section>
 
-      {/* Insignias y Formacion Tecnica - Grouped HR View */}
+      {/* Insignias y Formación Técnica - Grouped HR View */}
       <section>
         <h2 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4 flex items-center gap-2">
           <Award size={16} />
-          Insignias y Formacion Tecnica
+          Insignias y Formación Técnica
         </h2>
         
         {/* Red Hat Group */}
@@ -679,58 +801,96 @@ function HRView() {
           </h3>
           <div className="grid gap-2">
             {redHatBadges.map((cert, index) => (
-              <div
+              <a
                 key={index}
-                className="group flex items-center gap-3 p-2.5 rounded-lg border border-border bg-card/50 hover:border-red-500/30 transition-all duration-200"
+                href={cert.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 p-2.5 rounded-lg border border-border bg-card/50 hover:border-red-500/30 hover:bg-red-500/5 transition-all duration-200"
               >
                 <div className="shrink-0 w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: `${cert.color}10` }}>
                   <cert.icon className="w-4 h-4" style={{ color: cert.color }} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-sm font-medium text-foreground">{cert.name}</h3>
+                    <h3 className="text-sm font-medium text-foreground group-hover:text-red-600 transition-colors">{cert.name}</h3>
                     <CheckCircle size={12} className="shrink-0 text-green-500" />
                   </div>
                   <div className="text-xs text-muted-foreground">{cert.date}</div>
                 </div>
-                {cert.pdfUrl && (
-                  <a href={cert.pdfUrl} target="_blank" rel="noopener noreferrer" className="shrink-0 p-1.5 text-muted-foreground hover:text-red-500 transition-colors">
-                    <ExternalLink size={14} />
-                  </a>
-                )}
-              </div>
+                <span className="shrink-0 flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium text-muted-foreground group-hover:text-red-600 group-hover:bg-red-500/10 transition-colors">
+                  <FileText size={12} />
+                  Ver PDF
+                </span>
+              </a>
             ))}
           </div>
         </div>
 
         {/* Palo Alto Group */}
-        <div>
+        <div className="mb-4">
           <h3 className="text-xs font-medium text-orange-600 uppercase tracking-wider mb-2 flex items-center gap-2">
             <SiPaloaltonetworks className="w-4 h-4" />
             Palo Alto Networks
           </h3>
           <div className="grid gap-2">
             {paloAltoBadges.map((cert, index) => (
-              <div
+              <a
                 key={index}
-                className="group flex items-center gap-3 p-2.5 rounded-lg border border-border bg-card/50 hover:border-orange-500/30 transition-all duration-200"
+                href={cert.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 p-2.5 rounded-lg border border-border bg-card/50 hover:border-orange-500/30 hover:bg-orange-500/5 transition-all duration-200"
               >
                 <div className="shrink-0 w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: `${cert.color}10` }}>
                   <cert.icon className="w-4 h-4" style={{ color: cert.color }} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-sm font-medium text-foreground">{cert.name}</h3>
+                    <h3 className="text-sm font-medium text-foreground group-hover:text-orange-600 transition-colors">{cert.name}</h3>
                     <CheckCircle size={12} className="shrink-0 text-green-500" />
                   </div>
                   <div className="text-xs text-muted-foreground">{cert.date}</div>
                 </div>
-                {cert.pdfUrl && (
-                  <a href={cert.pdfUrl} target="_blank" rel="noopener noreferrer" className="shrink-0 p-1.5 text-muted-foreground hover:text-orange-500 transition-colors">
-                    <ExternalLink size={14} />
-                  </a>
-                )}
-              </div>
+                <span className="shrink-0 flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium text-muted-foreground group-hover:text-orange-600 group-hover:bg-orange-500/10 transition-colors">
+                  <FileText size={12} />
+                  Ver PDF
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Formación Complementaria */}
+        <div>
+          <h3 className="text-xs font-medium text-emerald-600 uppercase tracking-wider mb-2 flex items-center gap-2">
+            <GraduationCap className="w-4 h-4" />
+            Formación Complementaria
+          </h3>
+          <div className="grid gap-2">
+            {trainingBadges.map((cert, index) => (
+              <a
+                key={index}
+                href={cert.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 p-2.5 rounded-lg border border-border bg-card/50 hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all duration-200"
+              >
+                <div className="shrink-0 w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: `${cert.color}10` }}>
+                  <cert.icon className="w-4 h-4" style={{ color: cert.color }} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-sm font-medium text-foreground group-hover:text-emerald-600 transition-colors">{cert.name}</h3>
+                    <CheckCircle size={12} className="shrink-0 text-green-500" />
+                  </div>
+                  <div className="text-xs text-muted-foreground">{cert.issuer} · {cert.date}</div>
+                </div>
+                <span className="shrink-0 flex items-center gap-1 px-2 py-1 rounded-md text-[11px] font-medium text-muted-foreground group-hover:text-emerald-600 group-hover:bg-emerald-500/10 transition-colors">
+                  <FileText size={12} />
+                  Ver PDF
+                </span>
+              </a>
             ))}
           </div>
         </div>
@@ -740,7 +900,7 @@ function HRView() {
       <section>
         <h2 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-3 flex items-center gap-2">
           <Server size={16} />
-          Habilidades Tecnicas
+          Habilidades Técnicas
         </h2>
         <div className="space-y-2">
           {techStackCategories.map((category) => (
@@ -883,8 +1043,11 @@ function TechnicalView() {
           </h3>
           <div className="space-y-1.5">
             {redHatBadges.map((cert, index) => (
-              <motion.div
+              <motion.a
                 key={index}
+                href={cert.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.05 * index }}
@@ -896,26 +1059,28 @@ function TechnicalView() {
                   {cert.name}
                 </span>
                 <span className="text-[10px] text-muted-foreground font-mono">{cert.date}</span>
-                {cert.pdfUrl && (
-                  <a href={cert.pdfUrl} target="_blank" rel="noopener noreferrer" className="shrink-0 p-1 text-muted-foreground hover:text-red-400 transition-colors">
-                    <ExternalLink size={12} />
-                  </a>
-                )}
-              </motion.div>
+                <span className="shrink-0 flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono text-muted-foreground group-hover:text-red-400 group-hover:bg-red-500/10 transition-colors">
+                  <FileText size={11} />
+                  PDF
+                </span>
+              </motion.a>
             ))}
           </div>
         </div>
 
         {/* Palo Alto Group */}
-        <div>
+        <div className="mb-6">
           <h3 className="text-xs font-mono text-orange-500 uppercase tracking-wider mb-3 flex items-center gap-2">
             <SiPaloaltonetworks className="w-4 h-4" />
             Palo Alto Networks
           </h3>
           <div className="space-y-1.5">
             {paloAltoBadges.map((cert, index) => (
-              <motion.div
+              <motion.a
                 key={index}
+                href={cert.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.05 * index }}
@@ -927,12 +1092,44 @@ function TechnicalView() {
                   {cert.name}
                 </span>
                 <span className="text-[10px] text-muted-foreground font-mono">{cert.date}</span>
-                {cert.pdfUrl && (
-                  <a href={cert.pdfUrl} target="_blank" rel="noopener noreferrer" className="shrink-0 p-1 text-muted-foreground hover:text-orange-400 transition-colors">
-                    <ExternalLink size={12} />
-                  </a>
-                )}
-              </motion.div>
+                <span className="shrink-0 flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono text-muted-foreground group-hover:text-orange-400 group-hover:bg-orange-500/10 transition-colors">
+                  <FileText size={11} />
+                  PDF
+                </span>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+
+        {/* Formación Complementaria */}
+        <div>
+          <h3 className="text-xs font-mono text-emerald-500 uppercase tracking-wider mb-3 flex items-center gap-2">
+            <GraduationCap className="w-4 h-4" />
+            Formación Complementaria
+          </h3>
+          <div className="space-y-1.5">
+            {trainingBadges.map((cert, index) => (
+              <motion.a
+                key={index}
+                href={cert.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.05 * index }}
+                className="group flex items-center gap-3 px-3 py-2.5 rounded-md bg-[#0d1117]/80 border border-border/40 hover:border-emerald-500/40 hover:bg-[#0d1117] transition-all duration-200"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_6px_rgba(34,197,94,0.5)]" />
+                <cert.icon className="w-4 h-4 shrink-0" style={{ color: cert.color }} />
+                <span className="font-mono text-xs text-foreground group-hover:text-emerald-400 transition-colors flex-1">
+                  {cert.name}
+                </span>
+                <span className="text-[10px] text-muted-foreground font-mono">{cert.date}</span>
+                <span className="shrink-0 flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono text-muted-foreground group-hover:text-emerald-400 group-hover:bg-emerald-500/10 transition-colors">
+                  <FileText size={11} />
+                  PDF
+                </span>
+              </motion.a>
             ))}
           </div>
         </div>
@@ -1060,9 +1257,53 @@ function TechnicalView() {
           </div>
         </motion.div>
 
+        {/* Homelab Projects - Grid with images */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+          {otherProjects.filter((project) => project.image).map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 + 0.1 * index }}
+              className="group card-premium overflow-hidden flex flex-col h-full hover:border-primary/40"
+            >
+              <div className="h-28 w-full overflow-hidden border-b border-border/30 bg-muted/10 shrink-0">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4 flex flex-col flex-grow">
+                <span className="px-2 py-0.5 text-[10px] font-mono bg-primary/10 text-primary border border-primary/20 rounded w-fit mb-2">
+                  {project.category}
+                </span>
+                <h3 className="font-mono text-sm font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                  {project.title}
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-3 line-clamp-3 flex-grow">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.icons.map((Icon, i) => (
+                    <Icon key={i} className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" />
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-auto">
+                  {project.technologies.map((tech) => (
+                    <span key={tech} className="px-2 py-0.5 text-[9px] font-mono bg-secondary text-secondary-foreground border border-border/50 rounded">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
         {/* Other Projects - Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {otherProjects.slice(1).map((project, index) => (
+          {otherProjects.filter((project) => !project.image).slice(1).map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -1094,28 +1335,73 @@ function TechnicalView() {
                 ))}
               </div>
               <div className="flex items-center gap-2 pt-3 border-t border-border/30 mt-auto">
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-mono bg-primary text-primary-foreground rounded hover:opacity-90 transition-opacity"
-                >
-                  <Globe size={12} />
-                  Demo
-                </a>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-mono bg-secondary text-secondary-foreground border border-border rounded hover:border-primary/40 transition-colors"
-                >
-                  <Github size={12} />
-                  Repo
-                </a>
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-mono bg-primary text-primary-foreground rounded hover:opacity-90 transition-opacity"
+                  >
+                    <Globe size={12} />
+                    Demo
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-mono bg-secondary text-secondary-foreground border border-border rounded hover:border-primary/40 transition-colors"
+                  >
+                    <Github size={12} />
+                    Repo
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.45 }}
+          className="mt-4 card-premium p-5 border-red-500/20 hover:border-red-500/40"
+        >
+          <div className="flex items-start gap-4">
+            <div className="shrink-0 w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+              <Youtube size={20} className="text-red-500" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                <h3 className="font-mono text-sm font-semibold text-foreground">{youtubeChannel.title}</h3>
+                <span className="px-2 py-0.5 text-[10px] font-mono bg-red-500/10 text-red-400 border border-red-500/20 rounded">
+                  ASIR · Y1
+                </span>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+                {youtubeChannel.description}
+              </p>
+              <div className="flex flex-wrap gap-1.5 mb-4">
+                {youtubeChannel.technologies.map((tech) => (
+                  <span key={tech} className="px-2 py-0.5 text-[9px] font-mono bg-secondary text-secondary-foreground border border-border/50 rounded">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <a
+                href={youtubeChannel.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-mono bg-red-600/90 text-white rounded-lg hover:bg-red-600 transition-colors"
+              >
+                <Youtube size={16} />
+                {youtubeChannel.handle}
+                <ExternalLink size={12} className="opacity-70" />
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </motion.section>
 
       {/* Experience Timeline - Premium */}
@@ -1128,7 +1414,7 @@ function TechnicalView() {
           <h2>experience</h2>
         </div>
         <div className="space-y-4">
-          {experience.map((job, index) => (
+          {technicalExperience.map((job, index) => (
             <motion.div 
               key={index} 
               initial={{ opacity: 0, x: -20 }}
@@ -1145,6 +1431,9 @@ function TechnicalView() {
                     {job.period} | {job.location}
                   </p>
                 </div>
+                {job.intro && (
+                  <p className="text-xs text-muted-foreground mb-3">{job.intro}</p>
+                )}
                 <ul className="space-y-2">
                   {job.description.map((item, i) => (
                     <li key={i} className="text-xs text-muted-foreground flex items-start gap-2">
