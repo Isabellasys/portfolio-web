@@ -75,7 +75,7 @@ const personalInfo = {
   github: "github.com/Isabellasys",
   website: "",
   summary:
-    "Técnica Superior en Administración de Sistemas Informáticos en Red (ASIR) con perfil enfocado en ciberseguridad, automatización y gestión de entornos cloud. Experiencia práctica diseñando y desplegando infraestructuras seguras tanto en nubes públicas (AWS/Azure) como en entornos autogestionados en Hetzner, aplicando aislamiento de red y empaquetado mediante contenedores. Orientada a la optimización de ciclos de despliegue mediante CI/CD bajo principios de mínimo privilegio y alta disponibilidad.",
+    "Técnica Superior en ASIR especializada en ciberseguridad, automatización y arquitecturas cloud. Diseñó y despliego infraestructuras seguras y de alta disponibilidad, tanto en nubes públicas (AWS, Azure) como en entornos autogestionados (Hetzner). Acelero los ciclos de desarrollo mediante pipelines CI/CD y garantizo la robustez de los sistemas aplicando contenedorización, aislamiento de redes y el principio de mínimo privilegio.",
   subtitle: "Construyendo infraestructuras cloud seguras, aislamiento de red y automatización de sistemas en AWS, Azure y Hetzner.",
   photo: "/foto.png",
 };
