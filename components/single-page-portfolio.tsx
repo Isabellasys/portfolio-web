@@ -66,10 +66,10 @@ import {
 // ============================================
 
 const personalInfo = {
-  name: "Efranyeli Ramirez",
+  name: "Isabella Ramirez",
   title: "Linux, Cloud & Automation",
   location: "Madrid, España",
-  email: "efranyeligil@gmail.com",
+  email: "helloisabellarg@gmail.com",
   phone: "+34 622 906 233",
   linkedin: "linkedin.com/in/isabella5",
   github: "github.com/Isabellasys",
